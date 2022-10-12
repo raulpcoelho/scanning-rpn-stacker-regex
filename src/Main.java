@@ -1,7 +1,5 @@
 import java.util.Scanner;
-
 import stacker.rpn.lexer.Token;
-
 import java.util.List;
 
 

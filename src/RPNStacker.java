@@ -3,7 +3,6 @@ import java.util.Stack;
 import stacker.rpn.lexer.Token;
 import stacker.rpn.lexer.TokenType;
 
-
 public class RPNStacker {
 
     private static int operation (Token t, int op1, int op2) {
