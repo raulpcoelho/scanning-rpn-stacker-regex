@@ -6,10 +6,10 @@ import stacker.rpn.lexer.Regex;
 
 
 public class Scanning {
-    private static TokenType operation (String operator) {
-        if (Regex.isPlus("+")) return TokenType.PLUS;
-        else if (Regex.isMinus("-")) return TokenType.MINUS;
-        else if (Regex.isStar("*")) return TokenType.STAR;
+    private static TokenType operationType (String operator) {
+        if (Regex.isPlus(operator)) return TokenType.PLUS;
+        else if (Regex.isMinus(operator)) return TokenType.MINUS;
+        else if (Regex.isStar(operator)) return TokenType.STAR;
         else return TokenType.SLASH;
     }
 
@@ -21,7 +21,7 @@ public class Scanning {
                 Token t = new Token(TokenType.NUM, component);
                 l.add(t);
             } else if (Regex.isOP(component)) {
-                Token t = new Token(operation(component), component);
+                Token t = new Token(operationType(component), component);
                 l.add(t);
             } else {
                 throw new Exception("Error: Unexpected Token: " + component);

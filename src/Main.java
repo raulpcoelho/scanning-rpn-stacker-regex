@@ -25,7 +25,7 @@ public class Main {
             }
             //RPN evaluation:
             int result = RPNStacker.evaluate(tokens);
-            System.out.println("Resultado teste: " + result);
+            System.out.println("Resultado: " + result);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
