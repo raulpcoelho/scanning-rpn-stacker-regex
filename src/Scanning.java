@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 import stacker.rpn.lexer.Token;
 import stacker.rpn.lexer.TokenType;
@@ -13,9 +14,9 @@ public class Scanning {
         else return TokenType.SLASH;
     }
 
-    public static ArrayList<Token> scan(String exp) throws Exception {
+    public static List<Token> scan(String exp) throws Exception {
         String[] components = exp.split(" ");
-        ArrayList<Token> l = new ArrayList<Token>();
+        List<Token> l = new ArrayList<Token>();
         for (String component : components) {
             if (Regex.isNum(component)) {
                 Token t = new Token(TokenType.NUM, component);

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 import stacker.rpn.lexer.Token;
 
-import java.util.ArrayList;
+import java.util.List;
 
 
 public class Main {
@@ -19,7 +19,7 @@ public class Main {
 
         try {
             //Scanning:
-            ArrayList<Token> tokens = Scanning.scan(exp.toString());
+            List<Token> tokens = Scanning.scan(exp.toString());
             for (Token token : tokens) {
                 System.out.println(token);
             }

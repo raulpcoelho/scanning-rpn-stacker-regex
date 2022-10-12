@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 import stacker.rpn.lexer.Token;
 import stacker.rpn.lexer.TokenType;
@@ -13,7 +13,7 @@ public class RPNStacker {
         else return op1 / op2;
     }
 
-    public static int evaluate(ArrayList<Token> tokens){
+    public static int evaluate(List<Token> tokens){
         
         Stack<String> stack = new Stack<String>();
 
